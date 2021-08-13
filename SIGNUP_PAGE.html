@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="SIGNUP_PAGE.css">
+    <script src="loginDetails.js"></script>
+    <script>
+        function val1() {
+            var fnameBox = document.getElementById("fname");
+            fname = fnameBox.value;
+            var lnameBox = document.getElementById("lname");
+            lname = lnameBox.value;
+            var check = false;
+
+            fnameBox.className = "winInput1";
+            lnameBox.className = "winInput1";
+
+            var x = fname.localeCompare(lname);
+            if (fname != "" && isNaN(fname) && x != 0) {
+                document.getElementById("fname").className = document.getElementById("fname").className.replace("winInput1", "crctInput1");
+                check = true;
+            } else {
+                document.getElementById("fname").className = document.getElementById("fname").className.replace("winInput1", "wrongInput1");
+                check = false;
+            }
+            if (lname != "" && isNaN(lname) && x != 0) {
+                document.getElementById("lname").className = document.getElementById("lname").className.replace("winInput1", "crctInput1");
+                if (check != false)
+                    check = true;
+            } else {
+                document.getElementById("lname").className = document.getElementById("lname").className.replace("winInput1", "wrongInput1");
+                check = false;
+            }
+
+
+            var mailBox = document.getElementById("username");
+            var mail = mailBox.value;
+            var passBox = document.getElementById("password");
+            var pass = passBox.value;
+
+            mailBox.className = "winInput";
+            passBox.className = "winInput";
+
+
+            var mailMatch = /^([a-z0-9\.-@]*)+@([a-z0-9-])+\.([a-z]{2,5})(.[a-z]{2,3})*$/;
+            ///^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+
+            if (mailMatch.test(mail) && mail != "") {
+                //mailBox.style.color = "green";
+                document.getElementById("username").className = document.getElementById("username").className.replace("winInput", "crctInput");
+                if (check != false)
+                    check = true;
+            } else {
+                //mailBox.style.color = "red";
+                document.getElementById("username").className = document.getElementById("username").className.replace("winInput", "wrongInput");
+                check = false;
+            }
+
+            if (isNaN(pass) && pass != "") {
+                //passBox.style.color = "green";
+                document.getElementById("password").className = document.getElementById("password").className.replace("winInput", "crctInput");
+                if (check != false)
+                    check = true;
+            } else {
+                //passBox.style.color = "red";
+                document.getElementById("password").className = document.getElementById("password").className.replace("winInput", "wrongInput");
+                check = false;
+            }
+
+            if (check != false) {
+                alert("User Registered!!");
+            } else {
+                //alert("Please provide correct details");
+            }
+        }
+
+        function call(check) {
+            if (check != false) {
+                alert("Provide your credentials to LOGIN");
+                //window.location.href = "LOGIN_PAGE.html";
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="return">
+            <a style="text-decoration: none;" href="LOGIN_PAGE.HTML" target="_self"><span>&#8592</span>Return to login page</a>
+        </div>
+        <div class="form-model">
+            <div class="flex-container">
+                <header class="main-heading">SIGN UP</header>
+                <label class="w1">Please provide your details.</label>
+                <form class="form-list">
+                    <div class="inner">
+                        <span class="sub">
+                              <label class="wh">First Name</label><br>
+                              <input class="winInput1" type="text" id="fname">
+                          </span>
+                        <span class="sub">
+                            <label class="wh">Last Name</label><br>
+                            <input class="winInput1" type="text" id="lname">
+                          </span>
+                    </div>
+                    <label class="wht">*Email Address</label>
+                    <input class="winInput" type="text" id="username">
+                    <label class="wht">*Password</label>
+                    <input type="text" class="winInput" id="password">
+                    <div class="button-section">
+                        <button class="btn" onclick="val1()" type="button">SignUp</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="WEBMENU_PAGE.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <a href="index.html"><i class="fa fa-home"  id="home"></i></a>
+    <p id="top"></p>
+
+    <span id="OrderedItems" style=" width: 82%; height:75px; margin-left: 4px;">
+        Ordered Items:<p id="listOrder"></p>
+    </span>
+
+    <div id="bookBtn">
+        <button class="bookButton" onclick="costAlert()">Order Now<i class="fas fa-shopping-cart" style="padding-left: 3px;"></i>
+        </button>
+    </div>
+    <div class="f2" style="float: right; width: 1210px; margin-top: 70px;">
+
+        <ul type="none">
+            <div class="menuHeadings">
+                <h2 id="vegStarters">Starters - Veg</h2>
+            </div>
+
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title01">Baby Corn Manchurian</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a01" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result01" value="0">
+                <button class="sub" id="s01" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price01">&#8377; 239</p>
+                <p class="item-description"><em>manchurian style baby corn in soya sauce ginger,chilli&garlic </em></p>
+            </li>
+
+
+            <li class="menuItem">
+                <h3 class="title">
+                    <span id="title02">Veg Manchurian</span>
+                    <i class="far fa-dot-circle fa-xs"></i> <span><button class="add" id="a02" onclick="add(this.id)">+</button>
+                    <input type="textbox" class="count" id="result02" value="0">
+                    <button class="sub" id="s02" onclick="sub(this.id)">-</button></span></h3>
+
+                <p id="price02">&#8377; 269</p>
+                <p class="item-description"><em>mixed diced vegetables chinese marinated sorted to palak paste </em></p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title"><span id="title03"> Spring Rolls</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a03" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result03" value="0">
+                <button class="sub" id="s03" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price03">&#8377; 239</p>
+                <p class="item-description"><em>spring roll wrappers wrapped with mixture of some vegetables and spices and sauces </em></p>
+            </li>
+
+            <li class="menuItem"><span><h3 class="title"><span id="title04"> Shanghai Rolls</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a04" onclick="add(this.id)">+</button>
+            <input type="textbox" class="count" id="result04" value="0">
+            <button class="sub" id="s04" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price04">&#8377; 239</p>
+                <p class="item-description"><em>spring roll wrappers wrapped with mixture of some vegetables and sweet chilli sauce and some chinese sauces  </em></p>
+            </li>
+
+
+            <li class="menuItem">
+                <span><h3 class="title"><span id="title05">Chilli Mushroom</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a05" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result05" value="0">
+                <button class="sub" id="s05" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price05">&#8377; 239</p>
+                <p class="item-description"><em>fresh mushroom ,onion ,capcicum & chineese sauces  </em></p>
+            </li>
+
+
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title06">Mushroom 65</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a06" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result06" value="0">
+                <button class="sub" id="s06" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price06">&#8377; 239</p>
+                <p class="item-description"><em>manchurian style baby corn in soya sauce ginger,chilli&garlic </em></p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title07">Paneer 65</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a07" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result07" value="0">
+                <button class="sub" id="s07" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price07">&#8377; 239</p>
+                <p class="item-description"><em>paneer deep fried and tossed with schezwan sauce and chinese sauces  </em></p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title08">Ginger Paneer</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a08" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result08" value="0">
+                <button class="sub" id="s08" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price08">&#8377; 239</p>
+                <p class="item-description"><em>paneer deep fried and placed in ginger paste and some added chinese sauces  </em></p>
+            </li>
+
+            <div class="menuHeadings">
+                <h2 id="nonvegStarters">Starters - Non Veg</h2>
+            </div>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title09">Chicken 65</span><i class="far fa-dot-circle fa-xs" id="nvg"></i><span><button class="add" id="a09" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result09" value="0">
+                <button class="sub" id="s09" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price09">&#8377; 239</p>
+                <p class="item-description"><em>manchurian style chicken deep fried and tossed in soya sauce ginger,chilli&garlic and spices  </em></p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title10">Chicken Manchurian Dry</span><i class="far fa-dot-circle fa-xs" id="nvg"></i><span><button class="add" id="a10" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result10" value="0">
+                <button class="sub" id="s10" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price10"> &#8377; 239</p>
+                <p class="item-description"><em>manchurian style chicken deep fried and tossed in soya sauce ginger,chilli&garlic  </em></p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title11">Chicken Majestic</span><i class="far fa-dot-circle fa-xs" id="nvg"></i><span><button class="add" id="a11" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result11" value="0">
+                <button class="sub" id="s11" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price11"> &#8377; 239</p>
+                <p class="item-description"><em>chicken deep fried and tossed in sweet chilli sauce and other chinese sauces   </em></p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title12">Chilli Chicken</span><i class="far fa-dot-circle fa-xs" id="nvg"></i><span><button class="add" id="a12" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result12" value="0">
+                <button class="sub" id="s12" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price12"> &#8377; 239</p>
+                <p class="item-description"><em>fresh chicken,onion ,capcicum & chineese sauces  </em></p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title13">Ginger Chicken</span><i class="far fa-dot-circle fa-xs" id="nvg"></i><span><button class="add" id="a13" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result13" value="0">
+                <button class="sub" id="s13" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price13"> &#8377; 239</p>
+                <p class="item-description"><em>chicken deep fried and tossed with ginger and some spices and soya sauce </em></p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title14">Thai Chicken</span><i class="far fa-dot-circle fa-xs" id="nvg"></i><span><button class="add" id="a14" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result14" value="0">
+                <button class="sub" id="s14" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price14"> &#8377; 239</p>
+                <p class="item-description"><em>An abundance of whole basil leaves joins?chicken?and fiery red chiles for a quick, delicious,and decidedly spicy stir-fry.   </em></p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title15">Chicken Lollipop</span><i class="far fa-dot-circle fa-xs" id="nvg"></i><span><button class="add" id="a15" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result15" value="0">
+                <button class="sub" id="s15" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price15"> &#8377; 239</p>
+                <p class="item-description"><em>marinated deep fried chicken tossed to pepper,chinese sauces   </em></p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title16">Chilli Prawns</span><i class="far fa-dot-circle fa-xs" id="nvg"></i><span><button class="add" id="a16" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result16" value="0">
+                <button class="sub" id="s16" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price16"> &#8377; 239</p>
+                <p class="item-description"><em>fresh prawns,onion ,capcicum & chineese sauces  </em></p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title17">Loose Prawns</span><i class="far fa-dot-circle fa-xs" id="nvg"></i><span><button class="add" id="a17" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result17" value="0">
+                <button class="sub" id="s17" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price17"> &#8377; 239</p>
+                <p class="item-description"><em>prawns fried and tossed with spices </em></p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title18">Apollo Fish</span><i class="far fa-dot-circle fa-xs" id="nvg"></i><span><button class="add" id="a18" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result18" value="0">
+                <button class="sub" id="s18" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price18"> &#8377; 239</p>
+                <p class="item-description"><em>fresh fish deep fried and tossed with some chinese sauces </em></p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title19">Ginger Fish</span><i class="far fa-dot-circle fa-xs" id="nvg"></i><span><button class="add" id="a19" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result19" value="0">
+                <button class="sub" id="s19" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price19"> &#8377; 239</p>
+                <p class="item-description"><em>fish deep fried and tossed with ginger and some spices and soya sauce </em></p>
+            </li>
+
+            <div class="menuHeadings">
+                <h2 id="vegMainCourse">Veg - Main Course</h2>
+            </div>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title20">Kadai Veg</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a20" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result20" value="0">
+                <button class="sub" id="s20" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price20"> &#8377; 239</p>
+                <p class="item-description"><em>Mixed vegetables are cooked with freshly ground spices and then simmered in delicious tomato gravy.   </em></p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title21">Kadai Paneer</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a21" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result21" value="0">
+                <button class="sub" id="s21" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price21"> &#8377; 239</p>
+                <p class="item-description"><em>fresh paneer fried and cooked with freshly ground spices and then simmered in delicious tomato gravy.   </em></p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title22">Paneer Tikka Masal</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a22" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result22" value="0">
+                <button class="sub" id="s22" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price22"> &#8377; 239</p>
+                <p class="item-description"><em>marinated grilled cheese in punjabi spicy red sauce   </em></p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title23">Paneer Corn Burji</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a23" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result23" value="0">
+                <button class="sub" id="s23" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price23"> &#8377; 239</p>
+                <p class="item-description"><em>mixed grated paneer and corn kernels fried up with some spices  </em></p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title24">Tomato Dal</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a24" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result24" value="0">
+                <button class="sub" id="s24" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price24"> &#8377; 239</p>
+                <p class="item-description"><em>cooked toor dal mixed with tomatoes and some added spices </em></p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title25">Mehti Dal</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a25" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result25" value="0" disabled>
+                <button class="sub" id="s25" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price25"> &#8377; 239</p>
+                <p class="item-description"><em>cooked toor dal mixed with methi and some added spices   </em></p>
+            </li>
+
+            <div class="menuHeadings">
+                <h2 id="nonvegMainCourse">NonVeg - Main Course</h2>
+            </div>
+
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title26">Masala Chicken</span><i class="far fa-dot-circle fa-xs" id="nvg"></i><span><button class="add" id="a26" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result26" value="0" disabled>
+                <button class="sub" id="s26" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price26"> &#8377; 239</p>
+                <p class="item-description"><em>cooked chicken with freshly ground spices and then simmered in delicious tomato gravy and some south indian masala  </em></p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title27">Kadhai Chicken</span><i class="far fa-dot-circle fa-xs" id="nvg"></i><span><button class="add" id="a27" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result27" value="0" disabled>
+                <button class="sub" id="s27" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price27"> &#8377; 239</p>
+                <p class="item-description"><em>cooked chicken with freshly ground spices and then simmered in delicious tomato gravy.   </em></p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title28">Gongura Chicken</span><i class="far fa-dot-circle fa-xs" id="nvg"></i><span><button class="add" id="a28" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result28" value="0" disabled>
+                <button class="sub" id="s28" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price28"> &#8377; 239</p>
+                <p class="item-description"><em>cooked boneless chicken tossed to gonkura and some south indian masala   </em></p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title29">Butter Chicken</span><i class="far fa-dot-circle fa-xs" id="nvg"></i><span><button class="add" id="a29" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result29" value="0" disabled>
+                <button class="sub" id="s29" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price29"> &#8377; 239</p>
+                <p class="item-description"><em>grilled chicken in a buttery onion gravy with the addition of cream  </em></p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title30">Chicken Tikka Masala</span><i class="far fa-dot-circle fa-xs" id="nvg"></i><span><button class="add" id="a30" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result30" value="0" disabled>
+                <button class="sub" id="s30" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price30"> &#8377; 239</p>
+                <p class="item-description"><em>marinated grilled chicken in punjabi spicy red sauce   </em></p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title31">Methi Chicken</span><i class="far fa-dot-circle fa-xs" id="nvg"></i><span><button class="add" id="a31" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result31" value="0" disabled>
+                <button class="sub" id="s31" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price31"> &#8377; 239</p>
+                <p class="item-description"><em>cooked chicken with freshly ground spices and then simmered in delicious tomato and methi gravy.  </em></p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title32">Mutton Keema Masala</span><i class="far fa-dot-circle fa-xs" id="nvg"></i><span><button class="add" id="a32" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result32" value="0" disabled>
+                <button class="sub" id="s32" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price32"> &#8377; 239</p>
+                <p class="item-description"><em>cooked mutton keema tossed to light gravy with a strong aroma of spices </em></p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title33">Prawns Curry</span><i class="far fa-dot-circle fa-xs" id="nvg"></i><span><button class="add" id="a33" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result33" value="0" disabled>
+                <button class="sub" id="s33" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price33"> &#8377; 239</p>
+                <p class="item-description"><em>king prawn in traditional indian curry ..prawns marinated with indian masalas  </em></p>
+            </li>
+
+
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title34">Egg Burji</span><i class="far fa-dot-circle fa-xs" id="nvg"></i><span><button class="add" id="a34" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result34" value="0" disabled>
+                <button class="sub" id="s34" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price34"> &#8377; 239</p>
+                <p class="item-description"><em>egg marinated with chapped green chilli and onion &spices </em></p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title35">Egg Masala</span><i class="far fa-dot-circle fa-xs" id="nvg"></i><span><button class="add" id="a35" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result35" value="0" disabled>
+                <button class="sub" id="s35" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price35"> &#8377; 239</p>
+                <p class="item-description"><em>bolied egg marinated with tomato and onion grave indian spices </em></p>
+            </li>
+
+            <div class="menuHeadings">
+                <h2 id="biryani">Biryani</h2>
+            </div>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title47">Veg Biryani / Pulav</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a47" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result47" value="0" disabled>
+                <button class="sub" id="s47" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price47"> &#8377; 109</p>
+                <p class="item-description"><em>home style slow cooked rice with vegtables mixed with dry fruits& indian spices  </em></p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title48">Paneer Biryani</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a48" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result48" value="0" disabled>
+                <button class="sub" id="s48" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price48"> &#8377; 109</p>
+                <p class="item-description"><em>homemade cheese slow cooked with rice and indian spices   </em></p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title49">Mushroom Biryani</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a49" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result49" value="0" disabled>
+                <button class="sub" id="s49" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price49"> &#8377; 109</p>
+                <p class="item-description"><em>home style slow cooked flavoured rice with mushrooms mixed in indian spices and some gravy  </em></p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title50">Chicken Dum Biryani</span><i class="far fa-dot-circle fa-xs" id="nvg"></i><span><button class="add" id="a50" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result50" value="0" disabled>
+                <button class="sub" id="s50" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price50"> &#8377; 109</p>
+                <p class="item-description"><em>home style slow cooked rice with chicken mixed with dry fruits& indian spices </em></p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title51">Fried Chicken Biryani</span><i class="far fa-dot-circle fa-xs" id="nvg"></i><span><button class="add" id="a51" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result51" value="0" disabled>
+                <button class="sub" id="s51" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price51"> &#8377; 109</p>
+                <p class="item-description"><em>home style slow cooked flavoured rice with chicken pieces mixed with indian spices and gongura gravy   </em></p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title52">Mutton Kheema Biryani</span><i class="far fa-dot-circle fa-xs" id="nvg"></i><span><button class="add" id="a52" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result52" value="0" disabled>
+                <button class="sub" id="s52" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price52"> &#8377; 109</p>
+                <p class="item-description"><em>home style slow cooked menced mutton with rice and indian spices   </em></p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title53">Mutton Dum Biryani</span><i class="far fa-dot-circle fa-xs" id="nvg"></i><span><button class="add" id="a53" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result53" value="0" disabled>
+                <button class="sub" id="s53" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price53"> &#8377; 109</p>
+                <p class="item-description"><em>home style slow cooked rice with mutton mixed with dry fruits& indian spices  </em></p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title54">Prawns Biryani</span><i class="far fa-dot-circle fa-xs" id="nvg"></i><span><button class="add" id="a54" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result54" value="0" disabled>
+                <button class="sub" id="s54" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price54"> &#8377; 109</p>
+                <p class="item-description"><em>home style slow cooked prawns with rice and indian spices  </em></p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title55">Fish Biryani</span><i class="far fa-dot-circle fa-xs" id="nvg"></i><span><button class="add" id="a55" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result55" value="0" disabled>
+                <button class="sub" id="s55" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price55"> &#8377; 109</p>
+                <p class="item-description"><em>home style slow cooked fish with rice and indian spices  </em></p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title56">Egg Biryani</span><i class="far fa-dot-circle fa-xs" id="nvg"></i><span><button class="add" id="a56" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result56" value="0" disabled>
+                <button class="sub" id="s56" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price56"> &#8377; 109</p>
+                <p class="item-description"><em>home style slow cooked egg with rice and indian spices </em></p>
+            </li>
+            <div class="menuHeadings">
+                <h2 id="paratha">Paratha</h2>
+            </div>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title57">Lachha</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a57" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result57" value="0" disabled>
+                <button class="sub" id="s57" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price57"> &#8377; 109</p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title58">Aloo</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a58" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result58" value="0" disabled>
+                <button class="sub" id="s58" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price58"> &#8377; 109</p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title59">Paneer</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a59" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result59" value="0" disabled>
+                <button class="sub" id="s59" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price59"> &#8377; 109</p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title60">Chicken</span><i class="far fa-dot-circle fa-xs" id="nvg"></i><span><button class="add" id="a60" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result60" value="0" disabled>
+                <button class="sub" id="s60" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price60"> &#8377; 109</p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title61">Keema</span><i class="far fa-dot-circle fa-xs" id="nvg"></i><span><button class="add" id="a61" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result61" value="0" disabled>
+                <button class="sub" id="s61" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price61"> &#8377; 109</p>
+            </li>
+            <div class="menuHeadings">
+                <h2 id="noodles">Rice & Noodles</h2>
+            </div>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title68">Jeera Rice</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a68" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result68" value="0" disabled>
+                <button class="sub" id="s68" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price68"> &#8377; 109</p>
+                <p class="item-description"><em>home style slow cooked rice pan fried with added jeera and spices   </em></p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title69">Lemon Rice</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a69" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result69" value="0" disabled>
+                <button class="sub" id="s69" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price69"> &#8377; 109</p>
+                <p class="item-description"><em>home style slow cooked rice added with lemon syrup and spices   </em></p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title70">Curd Rice</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a70" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result70" value="0" disabled>
+                <button class="sub" id="s70" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price70"> &#8377; 109</p>
+                <p class="item-description"><em>home style slow cooked rice added with curd.   </em></p>
+            </li>
+
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title71">Veg Noodles</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a71" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result71" value="0" disabled>
+                <button class="sub" id="s71" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price71"> &#8377; 109</p>
+                <p class="item-description"><em>noodles are a stir-fried with some chinese sauce and added veggies </em></p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title72">Schezwan Veg Noodles</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a72" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result72" value="0" disabled>
+                <button class="sub" id="s72" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price72"> &#8377; 109</p>
+                <p class="item-description"><em>noodles are a stir-fried with some schezwan and chinese sauce and added veggies   </em></p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title73">Chicken Noodles</span><i class="far fa-dot-circle fa-xs" id="nvg"></i><span><button class="add" id="a73" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result73" value="0" disabled>
+                <button class="sub" id="s73" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price73"> &#8377; 109</p>
+                <p class="item-description"><em>noodles are a stir-fried with some chinese sauce and added chicken and egg  </em></p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title74">Singapore Chicken Noodles</span><i class="far fa-dot-circle fa-xs" id="nvg"></i><span><button class="add" id="a74" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result74" value="0" disabled>
+                <button class="sub" id="s74" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price74"> &#8377; 109</p>
+                <p class="item-description"><em>noodles are a stir-fried in curry sauce with added chicken and egg  </em></p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title75">Veg Fried Rice</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a75" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result75" value="0" disabled>
+                <button class="sub" id="s75" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price75"> &#8377; 109</p>
+                <p class="item-description"><em>rice is a -fried with some chinese sauce and added veggies  </em></p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title76">Egg Fried Rice</span><i class="far fa-dot-circle fa-xs" id="nvg"></i><span><button class="add" id="a76" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result76" value="0" disabled>
+                <button class="sub" id="s76" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price76"> &#8377; 109</p>
+                <p class="item-description"><em>paneer deep fried and placed in ginger paste and some added chinese sauces  </em></p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title77">Chicken Fried Rice</span><i class="far fa-dot-circle fa-xs" id="nvg"></i><span><button class="add" id="a77" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result77" value="0" disabled>
+                <button class="sub" id="s77" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price77"> &#8377; 109</p>
+                <p class="item-description"><em>soft rice is stir-fried with some chinese sauce and added chicken and egg  </em></p>
+            </li>
+
+            <div class="menuHeadings">
+                <h2 id="mocktails">Mocktails</h2>
+            </div>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title62">Virgin Mojito</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a62" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result62" value="0" disabled>
+                <button class="sub" id="s62" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price62"> &#8377; 109</p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title63">Blue Lagoon</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a63" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result63" value="0" disabled>
+                <button class="sub" id="s63" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price63"> &#8377; 109</p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title64">Sunrise Mocktail</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a64" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result64" value="0" disabled>
+                <button class="sub" id="s64" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price64"> &#8377; 109</p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title65">Green Lady</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a65" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result65" value="0" disabled>
+                <button class="sub" id="s65" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price65"> &#8377; 109</p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title66">Pineapple Mint Punch</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a66" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result66" value="0" disabled>
+                <button class="sub" id="s66" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price66"> &#8377; 109</p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title67">Quick Fruit Punch</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a67" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result67" value="0" disabled>
+                <button class="sub" id="s67" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price67"> &#8377; 109</p>
+            </li>
+            <div class="menuHeadings">
+                <h2 id="pastries">Cakes / Pastries</h2>
+            </div>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title36">Black Forest Cake</span><i class="far fa-dot-circle fa-xs" id="nvg"></i><span><button class="add" id="a36" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result36" value="0" disabled>
+                <button class="sub" id="s36" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price36"> &#8377; 499</p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title37">Delicious Butterscotch Cake</span><i class="far fa-dot-circle fa-xs" id="nvg"></i><span><button class="add" id="a37" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result37" value="0" disabled>
+                <button class="sub" id="s37" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price37"> &#8377; 549</p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title38">Red Velvet Cake</span><i class="far fa-dot-circle fa-xs" id="nvg"></i><span><button class="add" id="a38" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result38" value="0" disabled>
+                <button class="sub" id="s38" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price38"> &#8377; 799</p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title39">Fudge Brownie Cake</span><i class="far fa-dot-circle fa-xs" id="nvg"></i><span><button class="add" id="a39" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result39" value="0" disabled>
+                <button class="sub" id="s39" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price39"> &#8377; 649</p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title40">Chocolate Flakes Cake</span><i class="far fa-dot-circle fa-xs" id="nvg"></i><span><button class="add" id="a40" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result40" value="0" disabled>
+                <button class="sub" id="s40" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price40"> &#8377; 239</p>
+            </li>
+            <div class="menuHeadings">
+                <h2 id="iceCreams">Ice - Creams</h2>
+            </div>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title41">Vanilla</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a41" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result41" value="0" disabled>
+                <button class="sub" id="s41" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price41"> &#8377; 109</p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title42">Chocolate</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a42" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result42" value="0" disabled>
+                <button class="sub" id="s42" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price42"> &#8377; 109</p>
+            </li>
+
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title43">ButterScotch</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a43" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result43" value="0" disabled>
+                <button class="sub" id="s43" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price43"> &#8377; 109</p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title44">Mango</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a44" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result44" value="0" disabled>
+                <button class="sub" id="s44" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price44"> &#8377; 109</p>
+            </li>
+
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title45">Strawberry</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a45" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result45" value="0" disabled>
+                <button class="sub" id="s45" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price45"> &#8377; 109</p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title46">Green Pista</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a46" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result46" value="0" disabled>
+                <button class="sub" id="s46" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price46"> &#8377; 109</p>
+            </li>
+
+
+
+
+
+
+
+
+
+        </ul>
+        <div id="empty" style="display: none;">&#128528;</div>
+        <div id="bike" style="display: none;">&#128757</div>
+        <div id="confirmed" style="display: none;">&#10004;</div>
+
+        <script>
+            var finalValue = 0;
+            var cost = 0;
+            var finalCost = 0;
+            var list = new Array();
+            var cost = new Array();
+
+            function costAlert() {
+                if (finalCost <= 0) {
+                    var emoji = document.getElementById("empty").innerHTML;
+
+                    alert("Your cart is empty.." + emoji);
+                } else {
+
+                    if (confirm("Total Cost:" + finalCost + "\nDo you want to confirm the booking?")) {
+                        var emoji1 = document.getElementById("confirmed").innerHTML;
+                        var emoji2 = document.getElementById("bike").innerHTML;
+                        alert("Order Confirmed" + emoji1 + "\n We will get to you........." + emoji2);
+                        location.reload();
+                    }
+
+                }
+            }
+
+
+            function add(clicked_id) {
+
+                var des_id = "result" + clicked_id[clicked_id.length - 2] + "" + clicked_id[clicked_id.length - 1];
+                //alert(des_id);
+                rvalue = document.getElementById(des_id).value;
+                rvalue++;
+
+                document.getElementById(des_id).value = rvalue;
+                finalValue++;
+
+                document.getElementById("finalBowl").value = finalValue;
+                var id = "title" + clicked_id[clicked_id.length - 2] + "" + clicked_id[clicked_id.length - 1];
+                var item = document.getElementById(id).innerHTML;
+
+                list.splice(2, 0, item);
+
+
+
+
+                var cid = "price" + clicked_id[clicked_id.length - 2] + "" + clicked_id[clicked_id.length - 1];
+                cid = document.getElementById(cid).innerText;
+                cid = cid.substr(2, 5);
+                cost.splice(1, 0, cid);
+
+                /*            dlist = list.sort();
+                            for (var i = 0; i < dlist.length; i++) {
+                                if (i < dlist.length - 1) {
+                                    if (dlist[i] == dlist[i + 1]) {
+                                        delete dlist[i];
+                                    }
+                                }
+
+                            }
+                            alert(dlist);*/
+
+                document.getElementById("listOrder").innerText = list;
+                finalCost += Number(cid);
+
+                //document.getElementById("costOrder").innerHTML = finalCost;
+            }
+
+
+            function sub(clicked_id) {
+                var des_id = "result" + clicked_id[clicked_id.length - 2] + "" + clicked_id[clicked_id.length - 1];
+                var rvalue = document.getElementById(des_id).value;
+                rvalue--;
+                if (rvalue < 0 || finalValue < 0) {
+                    rvalue = 0;
+                    //finalValue = 0;
+                } else if (rvalue >= 0) {
+
+                    finalValue--;
+
+
+                    document.getElementById(des_id).value = rvalue;
+
+                    document.getElementById("finalBowl").value = finalValue;
+
+                    var id = "title" + clicked_id[clicked_id.length - 2] + "" + clicked_id[clicked_id.length - 1];
+                    var item = document.getElementById(id).innerHTML;
+                    var index = list.indexOf(item);
+                    list.splice(index, 1);
+                    document.getElementById("listOrder").innerHTML = list;
+
+
+
+                    var cid = "price" + clicked_id[clicked_id.length - 2] + "" + clicked_id[clicked_id.length - 1];
+                    cid = document.getElementById(cid).innerText;
+                    cid = cid.substr(2, 5);
+                    var citem = cost.indexOf(cid);
+                    cost.splice(citem, 1);
+
+
+                    finalCost -= Number(cid);
+                    // document.getElementById("costOrder").innerHTML = finalCost;
+                }
+            }
+        </script>
+        <div class="final">
+            <button class="cartButton" id="cartButton"><i class="fas fa-concierge-bell fa-lg"></i></button>
+            <input type="text" id="finalBowl" value="0" disabled>
+        </div>
+    </div>
+
+
+    <div class="f1" style="height: 500px; width: 308px; float: left; margin-top: 70px;">
+        <h2 id="category" class="menuHeadings">Categories</h2>
+        <button class="categoryItem" onclick="location.href='#vegStarters'">Veg-Starters</button>
+        <button class="categoryItem" onclick="location.href='#nonvegStarters'">Non-VegStarters</button>
+        <button class="categoryItem" onclick="location.href='#vegMainCourse'">Veg-Main Course</button>
+        <button class="categoryItem" onclick="location.href='#nonvegMainCourse'">NonVeg-Main Course</button>
+        <button class="categoryItem" onclick="location.href='#biryani'">Biryani</button>
+        <button class="categoryItem" onclick="location.href='#paratha'">Paratha</button>
+        <button class="categoryItem" onclick="location.href='#iceCreams'">Ice-Cream</button>
+        <button class="categoryItem" onclick="location.href='#pastries'">Cakes / Pastries</button>
+        <button class="categoryItem" onclick="location.href='#mocktails'">Mocktails</button>
+    </div>
+    <button id="pageReset" onclick="location.href='#top'"><i class="fas fa-arrow-circle-up"></i></button>
+
+
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>LOGIN</title>
+    <link rel="stylesheet" href="LOGIN_PAGE.css">
+    <script>
+        function val() {
+            var mailBox = document.getElementById("userlog");
+            var mail = document.getElementById("userlog").value;
+            var passBox = document.getElementById("passlog");
+            var pass = passBox.value;
+
+            mailBox.className = "winInput";
+            passBox.className = "winInput";
+            var check = false;
+
+
+            var mailMatch = /^([a-z0-9\.-@]*)+@([a-z0-9-])+\.([a-z]{2,5})(.[a-z]{2,3})*$/;
+            ///^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+
+
+            if ("abc@gmail.com".localeCompare(mail) == 0) {
+                //mailBox.style.color = "green";
+                document.getElementById("userlog").className = document.getElementById("userlog").className.replace("winInput", "crctInput");
+                check = true;
+            } else {
+                //mailBox.style.color = "red";
+                document.getElementById("userlog").className = document.getElementById("userlog").className.replace("winInput", "wrongInput");
+                check = false;
+
+            }
+
+            if ("abc@123".localeCompare(pass) == 0) {
+                //passBox.style.color = "green";
+                document.getElementById("passlog").className = document.getElementById("passlog").className.replace("winInput", "crctInput");
+                if (check != false)
+                    check = true;
+            } else {
+                //passBox.style.color = "red";
+                document.getElementById("passlog").className = document.getElementById("passlog").className.replace("winInput", "wrongInput");
+                check = false;
+            }
+
+            if (check != false) {
+                alert("User Verified" + "\nLogging In.....");
+                window.location.href = "index.html";
+            } else {
+                //alert("Invalid Credentials");
+                check = false;
+            }
+            if (check != false) {}
+
+
+        }
+
+        function norm() {
+            var mailBox = document.getElementById("userlog");
+            mailBox.style.color = "green";
+            var passBox = document.getElementById("passlog");
+            passBox.style.color = "blueviolet";
+
+        }
+    </script>
+    <style>
+        .def {
+            border-color: red;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="return">
+            <a style="text-decoration: none;" href="index.html" target="_self"><span>&#8592</span>Return to home page</a>
+        </div>
+        <div class="form-model">
+            <div class="flex-container">
+                <label class="heading">User Login</label>
+                <form class="form-list">
+                    <input type="text" class="winInput" placeholder="Email Address" id="userlog">
+                    <input type="text" class="winInput" placeholder="Password" id="passlog">
+                    <span><input type="checkbox" style="margin-top: 30px; color: white;">Remember Me</span>
+
+
+                    <div class="button-section">
+                        <button class="btn" type="button" onclick="val()">LOG IN</button>
+                    </div>
+
+                    <span><p class="forgot" style="float: left; margin-top: 50px;" onclick="forgot()"><u>Forgot Password?</u></p>
+                        <p class="register" onclick="location.href='SIGNUP_PAGE.html'" style="float: right; padding: 0; margin-top: 50px;"><u>NewUser? Register</u></p></span>
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+    <script>
+        function forgot() {
+            var a = prompt("Enter your registered mobile number:");
+            if (a != null && a.length == 10 && !(NUmber.isNaN(a))) {
+                alert("A link is sent to your mobile through SMS to reset the password");
+
+            } else {
+                alert("Please provide valid mobile number");
+            }
+        }
+    </script>
+</body>
+
+</html>

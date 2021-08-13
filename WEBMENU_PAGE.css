@@ -1,0 +1,206 @@
+* {
+    margin-left: 0;
+    padding-left: 0;
+    margin-right: 0;
+    padding-right: 0;
+}
+
+#nvg {
+    color: red
+}
+
+#home {
+    width: 50px;
+    height: 40px;
+    line-height: 40px;
+    position: fixed;
+    text-align: center;
+    top: 50px;
+    background-color: rgb(255, 0, 43);
+    color: white;
+    margin-top: 5px;
+}
+
+#home:hover {
+    cursor: pointer;
+    background-color: darkred;
+}
+
+.menuItem:nth-child(odd) {
+    background-color: gray;
+    border: 1px solid black;
+}
+
+.menuItem:nth-child(even) {
+    background-color: rgba(127, 255, 212, 0.596);
+    border: 1px solid black;
+}
+
+.add {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    display: inline-block;
+    right: 0.3%;
+    border: 0px;
+    outline: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: green;
+    text-align: center;
+    font-size: 15px;
+}
+
+.sub {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    display: inline-block;
+    right: 6%;
+    border: 0px;
+    outline: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: darkred;
+    text-align: center;
+    font-size: 15px;
+}
+
+.count {
+    width: 30px;
+    height: 30px;
+    background-color: orange;
+    border-radius: 3px;
+    border: none;
+    outline: 0;
+    color: black;
+    margin-bottom: 30px;
+    position: absolute;
+    right: 3.2%;
+    border: gray;
+    text-align: center;
+    border-bottom: 2px solid black;
+}
+
+.fa-xs {
+    color: darkgreen;
+    padding-left: 5px;
+}
+
+#finalBowl {
+    position: fixed;
+    width: 50px;
+    height: 48px;
+    font-size: 15px;
+    text-align: center;
+    color: white;
+    background-color: rgb(255, 0, 43);
+    outline: 0;
+    border: none;
+    position: fixed;
+    left: 48px;
+    top: 0;
+}
+
+.cartButton {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    top: 0;
+    left: 0;
+    background-color: rgb(255, 0, 43);
+    color: white;
+    outline: 0;
+    cursor: pointer;
+    border: none;
+}
+
+li {
+    padding-left: 20px;
+}
+
+#OrderedItems {
+    position: fixed;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.764);
+    top: 1px;
+    left: 100px;
+    border-radius: 20px 0px 20px 0px;
+    padding: 5px;
+}
+
+.bookButton {
+    position: fixed;
+    right: 2px;
+    top: 2px;
+    float: right;
+    width: 150px;
+    height: 50px;
+    border: none;
+    border-radius: 15px;
+    background-color: rgba(255, 0, 43, 0.904);
+    color: white;
+    outline: 0;
+    cursor: pointer;
+}
+
+li {
+    padding-left: 5px;
+}
+
+.menuHeadings {
+    height: 100px;
+    justify-content: center;
+    text-align: center;
+    line-height: 100px;
+    margin-bottom: 0;
+    background-color: rgb(255, 0, 43);
+    color: white;
+}
+
+.f1 {}
+
+.categoryItem {
+    text-decoration: none;
+    width: 308px;
+    height: 80px;
+    background-color: rgba(65, 21, 21, 0.8);
+    border: none;
+    text-align: left;
+    padding-left: 20px;
+    color: white;
+    font-size: 18px;
+    outline: 0;
+    margin: 0;
+}
+
+.categoryItem:hover {
+    font-size: 22px;
+    background-color: rgb(255, 0, 43);
+    color: aqua;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.categoryItem:focus {
+    font-size: 22px;
+    background-color: red;
+    color: aqua;
+    cursor: pointer;
+}
+
+#pageReset {
+    width: 60px;
+    height: 60px;
+    font-size: 25px;
+    color: white;
+    background-color: red;
+    position: fixed;
+    bottom: 20px;
+    left: 30px;
+    border: none;
+    border-radius: 50%;
+    outline: 0;
+    cursor: pointer;
+}
